@@ -1,0 +1,51 @@
+{
+  "originHash" : "6940473516047922ee965678fd6bcceb993899aff9626b4f361550530c3ec758",
+  "pins" : [
+    {
+      "identity" : "adwaita",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AparokshaUI/Adwaita",
+      "state" : {
+        "branch" : "main",
+        "revision" : "80057d928dee05853373b552358eef47f955a8d1"
+      }
+    },
+    {
+      "identity" : "levenshteintransformations",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/david-swift/LevenshteinTransformations",
+      "state" : {
+        "revision" : "002c3ae5c48f30d61c96045fd3ceb9928aa778d2",
+        "version" : "0.1.3"
+      }
+    },
+    {
+      "identity" : "meta",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AparokshaUI/Meta",
+      "state" : {
+        "branch" : "main",
+        "revision" : "94211b5c87e0065fcf25441bbea69d84e0f1765f"
+      }
+    },
+    {
+      "identity" : "meta-sqlite",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AparokshaUI/meta-sqlite",
+      "state" : {
+        "branch" : "main",
+        "revision" : "da44c9f01da9089c0f11273f441ef051b17f0e62"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift",
+      "state" : {
+        "revision" : "a95fc6df17d108bd99210db5e8a9bac90fe984b8",
+        "version" : "0.15.3"
+      }
+    }
+  ],
+  "version" : 3
+}

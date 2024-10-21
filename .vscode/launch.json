@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:tragedyyyyy}",
+            "name": "Debug Trails",
+            "program": "${workspaceFolder:tragedyyyyy}/.build/debug/Trails",
+            "preLaunchTask": "swift: Build Debug Trails"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:tragedyyyyy}",
+            "name": "Release Trails",
+            "program": "${workspaceFolder:tragedyyyyy}/.build/release/Trails",
+            "preLaunchTask": "swift: Build Release Trails"
+        }
+    ]
+}
