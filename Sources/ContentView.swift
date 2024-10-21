@@ -1,5 +1,6 @@
 @preconcurrency import Adwaita
 import Foundation
+import FoundationNetworking
 
 struct ContentView: View {
     @State("selection") private var selection: Page = .games
@@ -136,6 +137,16 @@ struct GameCard: View {
         }
         .padding()
         .style("game-card")
+        .css{
+             """
+            .game-card {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 5px;
+                margin: 5px;
+            }
+            """
+        }
     }
 }
 
@@ -190,25 +201,11 @@ struct AsyncImage: View {
     }
 }
 
-struct PictureDemo: View {
-    var view: Body {
-        Picture()
-            .data(try? Data(contentsOf: URL(string: "https://cdn1.epicgames.com/item/7ec453d446194b8f8afe82aaa9561211/XCOM2_Set_Up_Assets_2560x1440_2560x1440-24cabf9f3c4eedd602a340a4658b2278")!))
-        .halign(.center)
-        .pill()
-        .suggested()
-        .padding()
-        .frame(maxHeight: 1000)
-    }
-
-}
-
 
 
 enum Page: CaseIterable, Identifiable, Decodable, Encodable {
     case games
     case web
-    case picture
 
     var id: Self {
         self
@@ -220,8 +217,6 @@ enum Page: CaseIterable, Identifiable, Decodable, Encodable {
             return "Games"
         case .web:
             return "Web"
-        case .picture:
-            return "Picture"
         }
         
     }
@@ -232,8 +227,6 @@ enum Page: CaseIterable, Identifiable, Decodable, Encodable {
             return .default(icon: .applicationsGames)
         case .web:
             return .default(icon: .gtkIconBrowser4)
-        case .picture:
-            return .default(icon: .imageXGeneric)
         }
     }
 
@@ -244,8 +237,6 @@ enum Page: CaseIterable, Identifiable, Decodable, Encodable {
             GamesView()
         case .web:
             WebView()
-        case .picture:
-            PictureDemo()
         }
     }
 }
